@@ -19,7 +19,7 @@ public class Conexion {
     public Conexion(PrincipalAC pr) {
         try {
             this.principal = pr;
-            this.ws = IO.socket("http://192.168.0.8:8000");
+            this.ws = IO.socket("https://server-socket.herokuapp.com/");
             this.ws.on("status", estado());
             this.ws.open();
         } catch (URISyntaxException e) {
